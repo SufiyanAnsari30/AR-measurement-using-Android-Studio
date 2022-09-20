@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context="com.sufian.arcoremeasurement1.Measurement">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/sceneform_fragment"
+            android:name="com.google.ar.sceneform.ux.ArFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9" />
+
+        <TextView
+            android:id="@+id/distance_view"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.5"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <TableLayout
+            android:id="@+id/multiple_distance_table"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:layout_weight="0.0" />
+
+        <Spinner
+            android:id="@+id/distance_mode_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:spinnerMode="dialog" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/holo_blue_bright"
+            android:fontFamily="serif"
+            android:text="@string/clear"
+            android:textAlignment="center"
+            android:textColor="?android:attr/colorForeground"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
